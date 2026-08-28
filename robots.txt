@@ -1,0 +1,7 @@
+# Voyager — robots.txt
+# Replace YOUR-DOMAIN.com below with your real domain once deployed.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

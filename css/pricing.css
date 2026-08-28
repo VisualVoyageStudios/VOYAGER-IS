@@ -1,0 +1,250 @@
+/* ── Pricing hero ── */
+.pr-hero {
+    padding: 88px 0 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.pr-hero-inner {
+    width: min(100% - 40px, 720px);
+    margin: 0 auto;
+}
+.pr-hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.2rem, 6vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.02em;
+    margin: 12px 0 16px;
+}
+.pr-hero p {
+    color: var(--muted-2);
+    font-size: 14.5px;
+    line-height: 1.75;
+    max-width: 560px;
+    margin: 0 auto;
+}
+.pr-note-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+.pr-note-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted-2);
+    background: var(--bg-2);
+}
+.pr-note-pill svg { width: 13px; height: 13px; color: var(--gold); flex-shrink: 0; }
+
+/* ── Pricing cards ── */
+.pr-cards-section { padding: 72px 0; }
+.pr-cards-inner {
+    width: min(100% - 40px, var(--container));
+    margin: 0 auto;
+}
+.pr-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.pr-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 26px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color .2s, background .2s;
+}
+.pr-card:hover {
+    border-color: rgba(201,149,42,.3);
+    background: var(--card-hover);
+}
+.pr-type-tag {
+    display: inline-block;
+    width: fit-content;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted-2);
+}
+.pr-type-tag.indicator { color: #C9952A; border-color: rgba(201,149,42,.3); background: var(--gold-dim); }
+.pr-type-tag.strategy  { color: #9D7BC9; border-color: rgba(157,123,201,.3); background: rgba(157,123,201,.08); }
+.pr-card-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+    margin-top: -4px;
+}
+.pr-card-tagline {
+    font-size: 13px;
+    color: var(--muted-2);
+    margin-top: -10px;
+}
+.pr-card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+}
+.pr-card-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 12.5px;
+    color: var(--muted-2);
+    line-height: 1.5;
+}
+.pr-card-features li::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    margin-top: 2px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,149,42,.4);
+    background: var(--gold-dim);
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7l2.5 2.5 5-5' fill='none' stroke='%23C9952A' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.pr-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+.pr-card-price {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+}
+.pr-price-note {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-top: 3px;
+}
+.pr-card-btn {
+    padding: 10px 16px;
+    min-height: 42px;
+    font-size: 13px;
+}
+
+/* ── Compare table (static HTML, styled here) ── */
+.pr-compare-section {
+    padding: 0 0 72px;
+    border-top: 1px solid var(--border);
+}
+.pr-compare-inner {
+    width: min(100% - 40px, var(--container));
+    margin: 0 auto;
+    padding-top: 56px;
+}
+.pr-compare-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-top: 24px;
+}
+.pr-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+}
+.pr-table th, .pr-table td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 13px;
+    color: var(--muted-2);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+.pr-table thead th {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--bg-2);
+}
+.pr-table tbody th {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+.pr-table tbody tr:last-child th,
+.pr-table tbody tr:last-child td { border-bottom: none; }
+
+/* ── Trust strip ── */
+.pr-trust-section {
+    padding: 56px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+.pr-trust-inner {
+    width: min(100% - 40px, 640px);
+    margin: 0 auto;
+}
+.pr-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+.pr-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted-2);
+    background: var(--card);
+}
+.pr-trust-badge svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; }
+
+/* ── FAQ nudge ── */
+.pr-faq-note {
+    text-align: center;
+    padding: 0 0 72px;
+    font-size: 13.5px;
+    color: var(--muted-2);
+}
+.pr-faq-note a { color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.pr-faq-note a:hover { color: var(--gold-light); }
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+    .pr-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+    .pr-hero { padding: 64px 0 32px; }
+    .pr-cards { grid-template-columns: 1fr; }
+    .pr-card-footer { flex-direction: column; align-items: stretch; gap: 14px; }
+    .pr-card-btn { justify-content: center; }
+}
